@@ -34,6 +34,7 @@ gem "jbuilder"
 
 gem "devise"
 
+gem 'sassc'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 

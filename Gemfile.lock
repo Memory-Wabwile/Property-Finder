@@ -97,6 +97,7 @@ GEM
     drb (2.1.1)
       ruby2_keywords
     erubi (1.12.0)
+    ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -189,6 +190,8 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     ruby2_keywords (0.0.5)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -232,6 +235,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.1)
+  sassc
   sprockets-rails
   stimulus-rails
   turbo-rails
