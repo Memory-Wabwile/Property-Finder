@@ -1,5 +1,3 @@
-<% include ActionView::Helpers %>
-
 <div id="<%= dom_id property %>">
   <p>
     <strong>Name:</strong>
@@ -28,11 +26,12 @@
 
   <p>
   <strong>Photo:</strong>
-  <% if property.photo.is_a?(ActiveStorage::Attached::One) %>
-    <%= image_tag property.photo if property.photo.attached? %>
+  <% if property.photo.attached? %>
+    <%= image_tag property.photo %>
   <% else %>
     No photo available
   <% end %>
 </p>
+
 
 </div>
