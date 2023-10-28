@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+
+ /* styles for single property page  */
+.single-property h1{
+    text-transform: uppercase  ;
+} 
+.property-photo img{
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    max-width: 60%;
+}
+.single-property{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.single-property-link {
+    text-align: center;
+}
+.single-property-link button {
+    background-color: #ff2400; 
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    text-transform: uppercase; 
+    padding: 5px 10px;
+    font-weight: 400;    
+}
+
+/* styles for adding new property form  */
+.property-form {
+    max-width: 500px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .property-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .property-form .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

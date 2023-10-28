@@ -1,8 +1,15 @@
-<div id="<%= dom_id property %>">
-  <p>
-    <strong>Name:</strong>
+<div class="single-property" id="<%= dom_id property %>">
+  <h1 class="m-3" >
     <%= property.name %>
-  </p>
+  </h1>
+
+  <p class="property-photo" >
+    <% if property.photo.attached? %>
+    <%= image_tag property.photo %>
+  <% else %>
+    No photo available
+  <% end %>
+</p>
 
   <p>
     <strong>Address:</strong>
@@ -10,7 +17,7 @@
   </p>
 
   <p>
-    <strong>Price:</strong>
+    <strong>Price:</strong> $
     <%= property.price %>
   </p>
 
@@ -23,15 +30,5 @@
     <strong>Bathrooms:</strong>
     <%= property.bathrooms %>
   </p>
-
-  <p>
-  <strong>Photo:</strong>
-  <% if property.photo.attached? %>
-    <%= image_tag property.photo %>
-  <% else %>
-    No photo available
-  <% end %>
-</p>
-
 
 </div>
