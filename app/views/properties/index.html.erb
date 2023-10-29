@@ -1,14 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Properties</h1>
+<h1 class="text-center my-4" >Properties</h1>
 
-<div id="properties">
+<div class="row" id="properties">
   <% @properties.each do |property| %>
-    <%= render property %>
-    <p>
-      <%= link_to "Show this property", property %>
+    <div class="col-lg-4 my-3" id="home-property" >
+   <h3 class="text-center " > <%= property.name %></h3>
+   <% if property.photo.attached? %>
+   <%= image_tag property.photo, class: "img-fluid" %>
+ <% else %>
+   <p>No photo available</p>
+ <% end %>
+ <h5> <%= property.address %></h5>
+    <p class="text-center" >
+      <%= link_to "Show this property", property , class:"show-more-link" %>
     </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New property", new_property_path %>
+
