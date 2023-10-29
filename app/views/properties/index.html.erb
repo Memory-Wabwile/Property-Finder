@@ -1,6 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
+<div>
+<h1 class="display-3"> Search for your new home today... </h1>
+            
 <h1 class="text-center my-4" >Properties</h1>
+<a href="<%= new_property_path %>" class="btn btn-primary">Add Property</a>
+</div>
+
 
 <div class="row" id="properties">
   <% @properties.each do |property| %>
