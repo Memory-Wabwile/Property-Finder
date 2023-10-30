@@ -67,4 +67,17 @@ class PropertiesController < ApplicationController
     def property_params
       params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :photo)
     end
+
+    def search
+      @properties = Property.where("address ILIKE ?", "%#{params[:address]}%")
+      logger.debug "@properties: #{@properties}"
+      render :index
+    rescue NoMethodError
+      @properties = []
+      render :index
+    end
+
 end
+
+
+
